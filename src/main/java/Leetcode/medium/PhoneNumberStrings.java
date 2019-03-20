@@ -37,7 +37,7 @@ public class PhoneNumberStrings {
     }
 
     static void phoneNumbersRecursive(List<String> results, String digits, String current, int index, String[] mapping) {
-        if (current.length() == digits.length()) {
+        if (index == digits.length()) {
             results.add(current);
             return;
         }
