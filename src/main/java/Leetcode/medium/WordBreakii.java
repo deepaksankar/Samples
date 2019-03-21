@@ -4,8 +4,8 @@ import java.util.*;
 
 public class WordBreakii {
     public static void main(String[] args) {
-        String s = "catsanddog";
-        String[] words = {"cat", "and", "sand", "dog"};
+        String s = "catsandog";
+        String[] words = {"cats", "and", "sand", "dog"};
         Set<String> wordSet = new LinkedHashSet<>();
 
         for (String word : words) {
