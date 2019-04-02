@@ -17,9 +17,9 @@ public class KeysAndRooms {
         room.add(0);
 
         while(!room.isEmpty()) {
-            List<Integer> keys = new ArrayList<>();
+            List<Integer> keys = rooms.get(room.pop());
             for(int key : keys) {
-                if(!isVisited.contains(rooms.get(key))) {
+                if(!isVisited.contains(key)) {
                     room.add(key);
                     isVisited.add(key);
                 }
