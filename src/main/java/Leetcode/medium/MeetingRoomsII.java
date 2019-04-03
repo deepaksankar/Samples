@@ -36,7 +36,7 @@ public class MeetingRoomsII {
              }
              minHeap.add(earliest);
          }
-         
+
          return minHeap.size();
      }
 }
