@@ -8,7 +8,8 @@ import java.util.List;
  */
 public class SpiralMatrix {
     public static void main(String[] args) {
-
+        int[][] out = printMatrix(4,4,1,2);
+        System.out.println(out);
     }
 
     static int[][] printMatrix(int R, int C, int r0, int c0) {
