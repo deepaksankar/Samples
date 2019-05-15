@@ -8,6 +8,10 @@ public class WordBreakii {
         String[] words = {"cats", "and", "sand", "dog"};
         Set<String> wordSet = new LinkedHashSet<>();
 
+        if(s == null) {
+            return;
+        }
+
         for (String word : words) {
             wordSet.add(word);
         }
