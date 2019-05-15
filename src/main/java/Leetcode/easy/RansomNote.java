@@ -9,7 +9,7 @@ import java.util.Map;
 public class RansomNote {
     public static void main(String[] args) {
         String magazine = "aabbbcc";
-        String ransomNote = "abd";
+        String ransomNote = "ab";
         System.out.println(canConstruct(ransomNote, magazine));
     }
 
