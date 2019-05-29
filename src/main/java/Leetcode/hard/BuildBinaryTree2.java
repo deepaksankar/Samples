@@ -34,8 +34,8 @@ public class BuildBinaryTree2 {
 
         int inIndex = search(in, inStart, inEnd, node.val);
 
-        node.left = build(in, post, inStart, inIndex-1);
         node.right = build(in, post, inIndex+1, inEnd);
+        node.left = build(in, post, inStart, inIndex-1);
 
         return node;
     }

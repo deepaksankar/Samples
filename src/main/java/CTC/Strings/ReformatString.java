@@ -1,13 +1,14 @@
 package main.java.CTC.Strings;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
  * Given a string abbccb, give the output bbbcca
  * We need to use bi-directional map where we meed to get the key based on the value ans retrieve the alphabet
- * based on value
+ * based on value - Scalefactor
  */
 public class ReformatString {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class ReformatString {
             charCount.put(c, charCount.getOrDefault(c, 0)+1);
         }
 
-        PriorityQueue<Character> maxHeap = new PriorityQueue<>((x, y) -> charCount.get(y)- charCount.get(x));
+        PriorityQueue<Character> maxHeap = new PriorityQueue<>((x, y) -> charCount.get(y)-charCount.get(x));
 
         maxHeap.addAll(charCount.keySet());
 

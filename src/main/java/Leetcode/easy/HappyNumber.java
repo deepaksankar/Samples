@@ -8,7 +8,7 @@ import java.util.Set;
  */
 public class HappyNumber {
     public static void main(String[] args) {
-        int input = 90;
+        int input = 82;
         if(checkIfHappyNumber(input)) {
             System.out.println("It's a happy number");
         } else {
