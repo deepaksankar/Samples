@@ -1,5 +1,9 @@
 package main.java.Leetcode.medium;
 
+/**
+ * Space complexity - O(nk)
+ * Time complexity - O(nk^2)
+ */
 public class Eggdrop {
     public static void main(String[] args) {
         int numOfEggs = 2;

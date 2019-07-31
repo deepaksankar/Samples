@@ -2,10 +2,14 @@ package main.java.Leetcode.medium;
 
 import java.util.*;
 
+/**
+ * Time complexity -
+ *  space complexity - O(
+ */
 public class WordBreakii {
     public static void main(String[] args) {
-        String s = "catsandog";
-        String[] words = {"cats", "and", "sand", "dog"};
+        String s = "catsanddog";
+        String[] words = {"cats", "and", "sand", "dog", "cat"};
         Set<String> wordSet = new LinkedHashSet<>();
 
         if(s == null) {
