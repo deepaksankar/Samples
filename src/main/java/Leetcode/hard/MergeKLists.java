@@ -2,6 +2,10 @@ package main.java.Leetcode.hard;
 
 import java.util.PriorityQueue;
 
+/**
+ * TC - O(n log(n))
+ * SC - O(n)
+ */
 public class MergeKLists {
     public static void main(String[] args) {
         System.out.println("Done");

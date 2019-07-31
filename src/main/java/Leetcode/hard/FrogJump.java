@@ -6,7 +6,8 @@ import java.util.Stack;
 
 public class FrogJump {
     public static void main(String[] args) {
-        int[] stones = {};
+        int[] stones = {0,1,3,5,6,8,12,17};
+        System.out.println(canJump(stones));
     }
 
     static boolean canJump(int[] stones) {
@@ -32,7 +33,7 @@ public class FrogJump {
             int position = positions.pop();
             int jump = jumps.pop();
 
-            for (int i = jump -1; i <= jump + 1; i++) {
+            for (int i = jump - 1; i <= jump + 1; i++) {
                 if (i <= 0) {
                     continue;
                 }
