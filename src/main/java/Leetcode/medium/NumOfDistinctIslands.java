@@ -12,7 +12,7 @@ public class NumOfDistinctIslands {
     }
     static int numDistinctIslands(int[][] grid) {
         int result = 0;
-        if(grid == null || grid.length == 0 || grid[0].length == 0) {
+        if(grid == null || grid.length == 0) {
             return 0;
         }
         Set<String> set = new HashSet<>();

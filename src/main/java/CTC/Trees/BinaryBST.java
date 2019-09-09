@@ -1,5 +1,10 @@
 package main.java.CTC.Trees;
 
+/**
+ * Given a binary tree, identify if it is a BST or not.
+ * TC - O(n)
+ * SC - O(n) accounting for all recursive calls that take up stack memory.
+ */
 public class BinaryBST {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(5);

@@ -16,7 +16,7 @@ public class ReversePolishNotation {
         int result = 0;
 
         for(int i = 0; i < tokens.length; i++) {
-            if(tokens[i] == "+" || tokens[i] == "-" || tokens[i] == "*" || tokens[i] == "/") {
+            if(tokens[i].equals("+") || tokens[i].equals("-") || tokens[i].equals("*") || tokens[i].equals("/")) {
                 int b = stack.pop();
                 int a = stack.pop();
                 switch(tokens[i]) {
