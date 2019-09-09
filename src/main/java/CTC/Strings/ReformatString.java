@@ -9,6 +9,8 @@ import java.util.PriorityQueue;
  * Given a string abbccb, give the output bbbcca
  * We need to use bi-directional map where we meed to get the key based on the value ans retrieve the alphabet
  * based on value - Scalefactor
+ * TC - O(n log(n))
+ * SC - O(n)
  */
 public class ReformatString {
     public static void main(String[] args) {
