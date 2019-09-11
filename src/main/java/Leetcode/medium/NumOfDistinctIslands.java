@@ -15,35 +15,31 @@ public class NumOfDistinctIslands {
         if(grid == null || grid.length == 0) {
             return 0;
         }
-        Set<String> set = new HashSet<>();
+        Set<String> pattern = new HashSet<>();
 
         for(int row = 0; row < grid.length; row++) {
             for(int col = 0; col < grid[row].length; col++) {
                 if(grid[row][col] == 1) {
                     StringBuilder sb = new StringBuilder();
-                    helper(grid, row, col, 0, 0, sb);
-                    String s = sb.toString();
-                    if(!set.contains(s)) {
-                        result += 1;
-                        set.add(s);
-                    }
-
+                    dfs(grid, row, col, sb, "o");
+                    grid[row][col] = 0;
+                    pattern.add(sb.toString());
                 }
             }
         }
-        return result;
+        return pattern.size();
     }
 
-    static void helper(int[][] grid, int row, int col, int xpos, int ypos, StringBuilder sb) {
-        grid[row][col] = 0;
-        sb.append(xpos + "" + ypos);
-        for(int[] dir : dirs) {
-            int x = row+dir[0];
-            int y = col+dir[1];
-            if(x < 0 || x >= grid.length || y < 0 || y >= grid[row].length || grid[x][y] == 0) {
-                continue;
-            }
-            helper(grid, x, y, xpos+dir[0], ypos+dir[1], sb);
+    static void dfs(int[][] grid, int row, int col, StringBuilder sb, String dir) {
+        if(row < 0 || row >= grid.length || col < 0 || col >= grid[row].length || grid[row][col] == 0) {
+            return;
         }
+        sb.append(dir);
+        grid[row][col] = 0;
+        dfs(grid, row-1, col, sb, "u");
+        dfs(grid, row+1, col, sb, "d");
+        dfs(grid, row, col-1, sb, "l");
+        dfs(grid, row, col+1, sb, "r");
+        sb.append("b");
     }
 }
