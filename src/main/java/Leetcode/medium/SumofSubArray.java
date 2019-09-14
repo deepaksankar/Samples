@@ -15,23 +15,28 @@ import java.util.Map;
  */
 public class SumofSubArray {
     public static void main(String[] args) {
-        int[] inputArr = {1, 1, 1};
-        int sum = 2;
+        int[] inputArr = {-624, -624, -624, -624, -624, -624, -624, -624, -624, -624, -624};
+        int sum = -1248;
         int arrayCount = subarraySum(inputArr, sum);
         System.out.println("Number of sub arrays is " + arrayCount);
     }
 
-    static int subarraySum(int[] nums, int k) {
-        Map<Integer, Integer> sumMap = new HashMap<>();
-        if (nums.length == 0)
+    static public int subarraySum(int[] nums, int k) {
+        if(nums == null || nums.length == 0) {
             return 0;
-        int[] sums = new int[nums.length+1];
-        int tempSum = 0;
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            tempSum += nums[i];
-            sums[i+1] = tempSum;
         }
-        return count;
+        Map<Integer, Integer> map = new HashMap<>();
+        int sum = 0;
+        int result = 0;
+        map.put(0, 1);
+
+        for(int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            if(map.containsKey(sum-k)) {
+                result += map.get(sum-k);
+            }
+            map.put(sum, map.getOrDefault(sum, 0)+1);
+        }
+        return result;
     }
 }
