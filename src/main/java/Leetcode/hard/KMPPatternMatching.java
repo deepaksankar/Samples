@@ -4,7 +4,8 @@ public class KMPPatternMatching {
     public static void main(String[] args) {
         String input = "abxabcabcaby";
         String pattern = "abcaby";
-
+        boolean isPresent = KMP(input.toCharArray(), pattern.toCharArray());
+        System.out.println(isPresent);
     }
 
     static boolean KMP(char[] text, char[] pattern) {
@@ -41,5 +42,6 @@ public class KMPPatternMatching {
                 }
             }
         }
+        return result;
     }
 }
