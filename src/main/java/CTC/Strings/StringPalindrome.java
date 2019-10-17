@@ -39,4 +39,32 @@ public class StringPalindrome {
         }
         return -1;
     }
+
+    static boolean canBeAValidPalindrome(String s) {
+        if(s == null) {
+            return false;
+        }
+        if(s.length() == 0  || s.equals("")) {
+            return true;
+        }
+        int[] freq = new int[256];
+
+        int count = 0;
+
+        for(int i = 0; i < s.length(); i++) {
+            char c = Character.toLowerCase(s.charAt(i));
+            if(!Character.isLetterOrDigit(c)) {
+                continue;
+            } else {
+                freq[c]++;
+                if(freq[c] %2 == 1) {
+                    count++;
+                } else {
+                    count--;
+                }
+            }
+        }
+
+        return count <= 1;
+    }
 }
